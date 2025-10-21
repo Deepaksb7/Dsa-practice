@@ -122,14 +122,47 @@
 
 # backtracking
 
-def backTracking(start , path):
-    print(path)
+# def backTracking(start , path):
+#     print(path)
     
-    for i in range(start , len(num)):
-        path.append(num[i])
-        backTracking(i+1,path)
-        path.pop()
+#     for i in range(start , len(num)):
+#         path.append(num[i])
+#         backTracking(i+1,path)
+#         path.pop()
 
 
-num = [1,2,3]
-backTracking(0,[])
+# num = [1,2,3]
+# backTracking(0,[])
+
+
+def is_safe(maze,x,y,n):
+    return 0 <= x < n and 0 <= y < n and maze[x][y] == 1
+
+def solve_maze(maze, x, y , path ,n):
+    
+    if (x == n - 1 and y == n -1 ) :
+        print(path)
+        return
+
+    direction = [(0,1,"R"),(1,0,'D'),(0,-1,'L'),(-1,0,'U')]
+
+    for dx,dy,move in direction:
+        nx, ny = dx+x ,dy+y
+
+        if is_safe(maze , nx,ny,n):
+            maze[nx][ny]= 0
+            solve_maze(maze , nx, ny , path + move , n)
+            maze[nx][ny]=1
+
+
+maze = [
+    [1, 0, 0, 0],
+    [1, 1, 0, 1],
+    [1, 1, 0, 0],
+    [0, 1, 1, 1]
+]
+
+n= len(maze)
+maze[0][0] = 0 
+solve_maze(maze,0,0,'',n)
+
