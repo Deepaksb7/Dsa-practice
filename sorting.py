@@ -138,3 +138,71 @@
 
 
 
+#selection sort 
+
+# def selectionSort(arr):
+#     n= len(arr)
+#     for i in range(n):
+#         min_val= i
+#         for j in range(i+1,n):
+#             if arr[j] < arr[min_val]:
+#                 min_val = j
+#         arr[i],arr[min_val]= arr[min_val],arr[i] 
+#     return arr
+
+# arr = [64, 25, 12, 22, 11]
+# print(selectionSort(arr))
+
+
+
+#Insertion sort
+
+
+# def insertionSort(arr):
+#     for i in range(1,len(arr)):
+#         key = i 
+#         j = i-1
+
+#         while j>=0 and arr[j] > key:
+#             arr[j+1] = arr[j]
+#             j -=1
+#         arr[j+1] = key
+
+#     return arr
+
+
+
+# arr = [5, 3, 4, 11, 2]
+# print(insertionSort(arr))
+
+
+
+
+#counting sorting
+
+
+# def countingSort(arr):
+#     max_v = max(arr)
+
+#     count = [0] * (max_v + 1)
+#     output = [0] * (len(arr))
+
+#     for num in arr:
+#         count[num] += 1
+
+#     for i in range(1,len(count)):
+#         count[i] += count[i-1]
+
+#     for num in reversed(arr):
+#         output[count[num] - 1] = num
+#         count[num] -=1
+
+#     for i in range(len(arr)):
+#         arr[i] = output[i]
+
+#     return arr
+
+
+
+# arr = [4, 2, 2, 8, 3, 3, 1]
+# print(countingSort(arr))
