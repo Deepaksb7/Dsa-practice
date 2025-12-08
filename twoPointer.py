@@ -23,24 +23,39 @@
 # 2. Given a string, determine if it is a palindrome considering only alphanumeric characters and
 # ignoring cases.
 
-def palandrome(str):
-    i = 0
-    j = len(str) - 1
+# def palandrome(str):
+#     i = 0
+#     j = len(str) - 1
 
-    while i < j:
-        while i < j and not s[i].isalnum():
-            i += 1
+#     while i < j:
+#         while i < j and not s[i].isalnum():
+#             i += 1
 
-        while i < j and not s[j].isalnum():
-            j -= 1
+#         while i < j and not s[j].isalnum():
+#             j -= 1
             
-        if str[i].lower() != str[j].lower() :
-            return False
-        i += 1
-        j -= 1    
+#         if str[i].lower() != str[j].lower() :
+#             return False
+#         i += 1
+#         j -= 1    
         
-    return True
+#     return True
  
 
-s = "A man, a plan, a canal: Panama"
-print(palandrome(s))
+# s = "A man, a plan, a canal: Panama"
+# print(palandrome(s))
+
+
+#3. Given an array of integers sorted by absolute value, return a new array of their squares,
+# also sorted.
+
+# def squares(arr):
+#     result = []
+
+#     for i in arr:
+#         result.append(i*i)
+#     return result
+
+# arr = [-1, 1, -2, 2, 3]
+# print(squares(arr))
+
