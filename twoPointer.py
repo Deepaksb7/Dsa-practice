@@ -59,3 +59,32 @@
 # arr = [-1, 1, -2, 2, 3]
 # print(squares(arr))
 
+# 4. Given a sorted array, remove duplicates in-place and return the new length
+
+# def duplicates(arr):
+#     i=0
+#     j=1
+#     while j != len(arr):
+#         if arr[i] == arr[j]:
+#             arr.pop(j)
+#         else:
+#             i += 1
+#             j +=1 
+
+#     return arr
+
+# arr = [1, 1, 2, 2, 2, 3]
+# print(duplicates(arr))
+
+
+
+def duplicates(arr):
+    i= 0
+    for j in range(1,len(arr)):
+        if arr[j] != arr[i]:
+            i +=1
+            arr[i] = arr[j]
+    return i+1
+
+arr = [1, 1, 2, 2, 2, 3]
+print(duplicates(arr))
