@@ -175,12 +175,12 @@
 
 #linear search 
 
-def linearSearch(arr,tar):
-    for i in range(len(arr)):
-        if arr[i] == tar:
-            return i
-    return -1
+# def linearSearch(arr,tar):
+#     for i in range(len(arr)):
+#         if arr[i] == tar:
+#             return i
+#     return -1
 
-arr = [10, 23, 45, 70, 11, 15]
-print(linearSearch(arr, 70)) 
+# arr = [10, 23, 45, 70, 11, 15]
+# print(linearSearch(arr, 70)) 
 
