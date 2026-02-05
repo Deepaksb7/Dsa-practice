@@ -206,3 +206,23 @@
 
 # arr = [4, 2, 2, 8, 3, 3, 1]
 # print(countingSort(arr))
+
+
+
+# bubble sort
+
+# def bubbleSort(nums):
+#     n = len(nums)
+
+#     for i in range(n):
+#         isSwaping = False
+#         for j in range(n-i-1):
+#             if nums[j] > nums[j+1]:
+#                 nums[j],nums[j+1] = nums[j+1],nums[j]
+#                 isSwaping = True
+#         if not isSwaping:
+#             break
+#     return nums
+
+
+

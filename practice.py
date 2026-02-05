@@ -134,3 +134,7 @@
 # n= len(maze)
 # maze[0][0] = 0 
 # solve_maze(maze,0,0,'',n)
+
+
+
+ 
